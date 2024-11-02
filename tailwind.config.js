@@ -1,6 +1,8 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
+import forms from '@tailwindcss/forms';
 
 /** @type {import('tailwindcss').Config} */
+
 export default {
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
@@ -8,6 +10,7 @@ export default {
         './resources/**/*.blade.php',
         './resources/**/*.js',
         './resources/**/*.vue',
+        './resources/**/*.html',
     ],
     theme: {
         extend: {
@@ -16,5 +19,7 @@ export default {
             },
         },
     },
-    plugins: [],
+    plugins: [
+        forms,
+    ],
 };
